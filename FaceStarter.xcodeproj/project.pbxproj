@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		701915C39DBF22B4E6DC0050 /* libPods-FaceStarter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A14A7670FE824659A6E3798 /* libPods-FaceStarter.a */; };
 		FBFD77631E061014008B165C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFD775A1E061014008B165C /* ViewController.m */; };
-		FBFD77641E061014008B165C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FBFD775B1E061014008B165C /* Info.plist */; };
 		FBFD77651E061014008B165C /* FaceDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFD775C1E061014008B165C /* FaceDetector.m */; };
 		FBFD77661E061014008B165C /* ClarifaiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFD775E1E061014008B165C /* ClarifaiClient.m */; };
 		FBFD77671E061014008B165C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFD77621E061014008B165C /* AppDelegate.m */; };
@@ -139,7 +138,7 @@
 		FB0417261CDAF7EE00F0182C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Jack Rogers";
 				TargetAttributes = {
 					FB04172D1CDAF7EE00F0182C = {
@@ -174,7 +173,6 @@
 				FBFD77731E0611AA008B165C /* geth.jpg in Resources */,
 				FBFF4DA81E0618E300890A3A /* Main.storyboard in Resources */,
 				FBFF4DA71E0618E300890A3A /* LaunchScreen.storyboard in Resources */,
-				FBFD77641E061014008B165C /* Info.plist in Resources */,
 				FBFD776A1E061020008B165C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,8 +257,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -304,8 +304,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
