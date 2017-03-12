@@ -143,7 +143,7 @@
 				TargetAttributes = {
 					FB04172D1CDAF7EE00F0182C = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 32E6VH74P3;
+						DevelopmentTeam = PRZU7H23QD;
 					};
 				};
 			};
@@ -336,7 +336,7 @@
 			baseConfigurationReference = 74DD21C61AA9D8FE802F4AAA /* Pods-FaceStarter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 32E6VH74P3;
+				DEVELOPMENT_TEAM = PRZU7H23QD;
 				INFOPLIST_FILE = "$(SRCROOT)/FaceStarter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Clarifai.FaceStarter;
@@ -349,7 +349,7 @@
 			baseConfigurationReference = 709C83E58CDADF5761613F5B /* Pods-FaceStarter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 32E6VH74P3;
+				DEVELOPMENT_TEAM = PRZU7H23QD;
 				INFOPLIST_FILE = "$(SRCROOT)/FaceStarter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Clarifai.FaceStarter;
