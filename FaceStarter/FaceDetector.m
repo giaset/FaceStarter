@@ -6,7 +6,6 @@
 //  Copyright © 2016 Jack Rogers. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "FaceDetector.h"
 
 @interface FaceDetector ()
