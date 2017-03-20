@@ -6,15 +6,21 @@
 //  Copyright © 2017 Jack Rogers. All rights reserved.
 //
 
-class SelectFriendViewController: UIViewController {
+class SelectFriendViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    let completionBlock: (String?) -> Void
-    let tableView = UITableView()
+    private let completionBlock: (String?) -> Void
+    private let tableView = UITableView()
+    private let friends: [String]
+    
+    private let cellIdentifier = "Cell"
     
     init(completionBlock: @escaping (String?) -> Void) {
         self.completionBlock = completionBlock
+        self.friends = Array(LocalStorage.friends().keys).sorted()
         super.init(nibName: nil, bundle: nil)
         title = "Select Other Friend"
+        tableView.dataSource = self
+        tableView.delegate = self
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -23,6 +29,7 @@ class SelectFriendViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         view.addSubviewForAutolayout(tableView)
         tableView.leadingAnchor.activateConstraint(equalTo: view.leadingAnchor)
         tableView.trailingAnchor.activateConstraint(equalTo: view.trailingAnchor)
@@ -55,5 +62,24 @@ class SelectFriendViewController: UIViewController {
         }))
         
         present(alert, animated: true)
+    }
+    
+    // MARK: UITableViewDataSource
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return friends.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        cell.textLabel?.text = friends[indexPath.row]
+        return cell
+    }
+    
+    // MARK: UITableViewCellDelegate
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        completionBlock(friends[indexPath.row])
     }
 }

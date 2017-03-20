@@ -49,12 +49,22 @@ class MainViewController: UIViewController {
         setupSubviews()
         
         switch PHPhotoLibrary.authorizationStatus() {
-        case .notDetermined, .authorized:
-            faceIterator.assets = PHAsset.fetchAssets(with: .image, options: nil)
-            nextFace()
+        case .notDetermined:
+            PHPhotoLibrary.requestAuthorization{ status in
+                if status == .authorized {
+                    self.fetchAssets()
+                }
+            }
+        case .authorized:
+            fetchAssets()
         default:
             print("Must give photo access")
         }
+    }
+    
+    func fetchAssets() {
+        faceIterator.assets = PHAsset.fetchAssets(with: .image, options: nil)
+        nextFace()
     }
     
     func setupSubviews() {
@@ -86,7 +96,7 @@ class MainViewController: UIViewController {
         otherButton.trailingAnchor.activateConstraint(equalTo: view.trailingAnchor, constant: -padding)
         otherButton.topAnchor.activateConstraint(equalTo: suggestedButton.bottomAnchor, constant: padding)
         
-        skipButton.title = "Skip For Now"
+        skipButton.title = "Skip"
         skipButton.addTarget(self, action: #selector(nextFace), for: .touchUpInside)
         view.addSubviewForAutolayout(skipButton)
         skipButton.leadingAnchor.activateConstraint(equalTo: view.leadingAnchor, constant: padding)
