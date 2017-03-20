@@ -18,6 +18,7 @@ class MainViewController: UIViewController {
     let spacerView1 = UIView()
     let suggestedButton = FaceStarterButton(type: .greenButton)
     let otherButton = FaceStarterButton(type: .defaultButton)
+    let skipButton = FaceStarterButton(type: .blueButton)
     let spacerView2 = UIView()
     
     let faceIterator = FaceIterator()
@@ -85,10 +86,17 @@ class MainViewController: UIViewController {
         otherButton.trailingAnchor.activateConstraint(equalTo: view.trailingAnchor, constant: -padding)
         otherButton.topAnchor.activateConstraint(equalTo: suggestedButton.bottomAnchor, constant: padding)
         
+        skipButton.title = "Skip For Now"
+        skipButton.addTarget(self, action: #selector(nextFace), for: .touchUpInside)
+        view.addSubviewForAutolayout(skipButton)
+        skipButton.leadingAnchor.activateConstraint(equalTo: view.leadingAnchor, constant: padding)
+        skipButton.trailingAnchor.activateConstraint(equalTo: view.trailingAnchor, constant: -padding)
+        skipButton.topAnchor.activateConstraint(equalTo: otherButton.bottomAnchor, constant: padding)
+        
         view.addSubviewForAutolayout(spacerView2)
         spacerView2.leadingAnchor.activateConstraint(equalTo: view.leadingAnchor)
         spacerView2.trailingAnchor.activateConstraint(equalTo: view.trailingAnchor)
-        spacerView2.topAnchor.activateConstraint(equalTo: otherButton.bottomAnchor)
+        spacerView2.topAnchor.activateConstraint(equalTo: skipButton.bottomAnchor)
         spacerView2.bottomAnchor.activateConstraint(equalTo: view.bottomAnchor)
         spacerView2.heightAnchor.activateConstraint(equalTo: spacerView1.heightAnchor)
     }
@@ -96,6 +104,7 @@ class MainViewController: UIViewController {
     func setButtonsEnabled(_ enabled: Bool) {
         suggestedButton.isEnabled = enabled
         otherButton.isEnabled = enabled
+        skipButton.isEnabled = enabled
     }
     
     func presentSelectFriendController() {

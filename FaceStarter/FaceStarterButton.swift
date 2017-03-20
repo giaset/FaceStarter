@@ -9,12 +9,14 @@
 import UIKit
 
 enum FaceStarterButtonType {
-    case defaultButton, greenButton
+    case defaultButton, greenButton, blueButton
     
     func normalColor() -> UIColor {
         switch self {
         case .greenButton:
             return UIColor(hexString: "08A045")
+        case .blueButton:
+            return UIColor(hexString: "2F4858")
         default:
             return UIColor(hexString: "B2B2B2")
         }
@@ -24,6 +26,8 @@ enum FaceStarterButtonType {
         switch self {
         case .greenButton:
             return UIColor(hexString: "033F1B")
+        case .blueButton:
+            return UIColor(hexString: "1B2933")
         default:
             return UIColor(hexString: "3F3F3F")
         }
