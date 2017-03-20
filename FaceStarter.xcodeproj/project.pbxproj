@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6846522A1E7F7B6C00828480 /* FaceStarterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684652291E7F7B6C00828480 /* FaceStarterButton.swift */; };
 		68B400C21E7F12970023B7A6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B400C11E7F12970023B7A6 /* MainViewController.swift */; };
 		68B400C51E7F51180023B7A6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B400C41E7F51180023B7A6 /* Extensions.swift */; };
 		68B400C71E7F62F50023B7A6 /* FaceIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B400C61E7F62F50023B7A6 /* FaceIterator.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		0A14A7670FE824659A6E3798 /* libPods-FaceStarter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FaceStarter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		684652291E7F7B6C00828480 /* FaceStarterButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FaceStarterButton.swift; path = FaceStarter/FaceStarterButton.swift; sourceTree = SOURCE_ROOT; };
 		68B400BD1E7F10390023B7A6 /* FaceStarter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FaceStarter-Bridging-Header.h"; sourceTree = "<group>"; };
 		68B400C11E7F12970023B7A6 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = FaceStarter/MainViewController.swift; sourceTree = SOURCE_ROOT; };
 		68B400C41E7F51180023B7A6 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = FaceStarter/Extensions.swift; sourceTree = SOURCE_ROOT; };
@@ -104,6 +106,7 @@
 				68B400C11E7F12970023B7A6 /* MainViewController.swift */,
 				68B400C61E7F62F50023B7A6 /* FaceIterator.swift */,
 				68B400C41E7F51180023B7A6 /* Extensions.swift */,
+				684652291E7F7B6C00828480 /* FaceStarterButton.swift */,
 			);
 			name = FaceStarter;
 			path = ME;
@@ -233,6 +236,7 @@
 			files = (
 				FBFF4DAA1E0618FD00890A3A /* main.m in Sources */,
 				68B400C71E7F62F50023B7A6 /* FaceIterator.swift in Sources */,
+				6846522A1E7F7B6C00828480 /* FaceStarterButton.swift in Sources */,
 				68B400C51E7F51180023B7A6 /* Extensions.swift in Sources */,
 				FBFD77651E061014008B165C /* FaceDetector.m in Sources */,
 				FBFD77671E061014008B165C /* AppDelegate.m in Sources */,

@@ -15,6 +15,11 @@ class MainViewController: UIViewController {
     
     let imageView = UIImageView()
     
+    let spacerView1 = UIView()
+    let suggestedButton = FaceStarterButton(type: .greenButton)
+    let otherButton = FaceStarterButton(type: .defaultButton)
+    let spacerView2 = UIView()
+    
     let faceIterator = FaceIterator()
     var faces = [UIImage]()
     
@@ -31,12 +36,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        
-        view.addSubviewForAutolayout(imageView)
-        imageView.leadingAnchor.activateConstraint(equalTo: view.leadingAnchor)
-        imageView.trailingAnchor.activateConstraint(equalTo: view.trailingAnchor)
-        imageView.heightAnchor.activateConstraint(equalTo: imageView.widthAnchor)
-        imageView.topAnchor.activateConstraint(equalTo: view.topAnchor, constant: 20)
+        setupSubviews()
         
         switch PHPhotoLibrary.authorizationStatus() {
         case .notDetermined, .authorized:
@@ -47,11 +47,45 @@ class MainViewController: UIViewController {
         }
     }
     
+    func setupSubviews() {
+        let padding: CGFloat = 10
+        
+        view.addSubviewForAutolayout(imageView)
+        imageView.leadingAnchor.activateConstraint(equalTo: view.leadingAnchor)
+        imageView.trailingAnchor.activateConstraint(equalTo: view.trailingAnchor)
+        imageView.topAnchor.activateConstraint(equalTo: view.topAnchor, constant: 20)
+        imageView.heightAnchor.activateConstraint(equalTo: imageView.widthAnchor)
+        
+        view.addSubviewForAutolayout(spacerView1)
+        spacerView1.leadingAnchor.activateConstraint(equalTo: view.leadingAnchor)
+        spacerView1.trailingAnchor.activateConstraint(equalTo: view.trailingAnchor)
+        spacerView1.topAnchor.activateConstraint(equalTo: imageView.bottomAnchor)
+        
+        suggestedButton.title = "Suggestion: None"
+        view.addSubviewForAutolayout(suggestedButton)
+        suggestedButton.leadingAnchor.activateConstraint(equalTo: view.leadingAnchor, constant: padding)
+        suggestedButton.trailingAnchor.activateConstraint(equalTo: view.trailingAnchor, constant: -padding)
+        suggestedButton.topAnchor.activateConstraint(equalTo: spacerView1.bottomAnchor)
+        
+        otherButton.title = "+ Other Friend"
+        view.addSubviewForAutolayout(otherButton)
+        otherButton.leadingAnchor.activateConstraint(equalTo: view.leadingAnchor, constant: padding)
+        otherButton.trailingAnchor.activateConstraint(equalTo: view.trailingAnchor, constant: -padding)
+        otherButton.topAnchor.activateConstraint(equalTo: suggestedButton.bottomAnchor, constant: padding)
+        
+        view.addSubviewForAutolayout(spacerView2)
+        spacerView2.leadingAnchor.activateConstraint(equalTo: view.leadingAnchor)
+        spacerView2.trailingAnchor.activateConstraint(equalTo: view.trailingAnchor)
+        spacerView2.topAnchor.activateConstraint(equalTo: otherButton.bottomAnchor)
+        spacerView2.bottomAnchor.activateConstraint(equalTo: view.bottomAnchor)
+        spacerView2.heightAnchor.activateConstraint(equalTo: spacerView1.heightAnchor)
+    }
+    
     func nextFace() {
         if faces.count > 0 {
             let nextFace = faces.removeFirst()
             imageView.image = nextFace
-            printEmbedding(faceImage: nextFace)
+            //printEmbedding(faceImage: nextFace)
         } else {
             faceIterator.nextFaces{ faces in
                 if let faces = faces {
