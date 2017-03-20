@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		68B400C21E7F12970023B7A6 /* PermissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B400C11E7F12970023B7A6 /* PermissionsViewController.swift */; };
+		68B400C21E7F12970023B7A6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B400C11E7F12970023B7A6 /* MainViewController.swift */; };
+		68B400C51E7F51180023B7A6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B400C41E7F51180023B7A6 /* Extensions.swift */; };
+		68B400C71E7F62F50023B7A6 /* FaceIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B400C61E7F62F50023B7A6 /* FaceIterator.swift */; };
 		701915C39DBF22B4E6DC0050 /* libPods-FaceStarter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A14A7670FE824659A6E3798 /* libPods-FaceStarter.a */; };
 		FBFD77651E061014008B165C /* FaceDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFD775C1E061014008B165C /* FaceDetector.m */; };
 		FBFD77661E061014008B165C /* ClarifaiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFD775E1E061014008B165C /* ClarifaiClient.m */; };
 		FBFD77671E061014008B165C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFD77621E061014008B165C /* AppDelegate.m */; };
 		FBFD776A1E061020008B165C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBFD77681E061020008B165C /* Assets.xcassets */; };
-		FBFD77731E0611AA008B165C /* geth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBFD77721E0611AA008B165C /* geth.jpg */; };
 		FBFF4DA71E0618E300890A3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBFF4DA51E0618E300890A3A /* LaunchScreen.storyboard */; };
 		FBFF4DAA1E0618FD00890A3A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFF4DA91E0618FD00890A3A /* main.m */; };
 /* End PBXBuildFile section */
@@ -21,7 +22,9 @@
 /* Begin PBXFileReference section */
 		0A14A7670FE824659A6E3798 /* libPods-FaceStarter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FaceStarter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68B400BD1E7F10390023B7A6 /* FaceStarter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FaceStarter-Bridging-Header.h"; sourceTree = "<group>"; };
-		68B400C11E7F12970023B7A6 /* PermissionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PermissionsViewController.swift; path = FaceStarter/PermissionsViewController.swift; sourceTree = SOURCE_ROOT; };
+		68B400C11E7F12970023B7A6 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = FaceStarter/MainViewController.swift; sourceTree = SOURCE_ROOT; };
+		68B400C41E7F51180023B7A6 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = FaceStarter/Extensions.swift; sourceTree = SOURCE_ROOT; };
+		68B400C61E7F62F50023B7A6 /* FaceIterator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FaceIterator.swift; path = FaceStarter/FaceIterator.swift; sourceTree = SOURCE_ROOT; };
 		709C83E58CDADF5761613F5B /* Pods-FaceStarter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceStarter.release.xcconfig"; path = "Pods/Target Support Files/Pods-FaceStarter/Pods-FaceStarter.release.xcconfig"; sourceTree = "<group>"; };
 		74DD21C61AA9D8FE802F4AAA /* Pods-FaceStarter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceStarter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FaceStarter/Pods-FaceStarter.debug.xcconfig"; sourceTree = "<group>"; };
 		FB04172E1CDAF7EE00F0182C /* FaceStarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceStarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,7 +36,6 @@
 		FBFD77611E061014008B165C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = FaceStarter/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		FBFD77621E061014008B165C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = FaceStarter/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		FBFD77681E061020008B165C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = FaceStarter/Assets.xcassets; sourceTree = SOURCE_ROOT; };
-		FBFD77721E0611AA008B165C /* geth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = geth.jpg; path = FaceStarter/geth.jpg; sourceTree = SOURCE_ROOT; };
 		FBFF4DA51E0618E300890A3A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = FaceStarter/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		FBFF4DA91E0618FD00890A3A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = FaceStarter/main.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -50,14 +52,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		68B400C31E7F129D0023B7A6 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				68B400C11E7F12970023B7A6 /* PermissionsViewController.swift */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
 		CAA32D2ACFCE3EA3BA7A0F83 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,10 +91,8 @@
 		FB0417301CDAF7EE00F0182C /* FaceStarter */ = {
 			isa = PBXGroup;
 			children = (
-				68B400C31E7F129D0023B7A6 /* Controllers */,
 				FBFF4DA91E0618FD00890A3A /* main.m */,
 				FBFF4DA51E0618E300890A3A /* LaunchScreen.storyboard */,
-				FBFD77721E0611AA008B165C /* geth.jpg */,
 				FBFD77681E061020008B165C /* Assets.xcassets */,
 				FBFD775B1E061014008B165C /* Info.plist */,
 				FBFD775D1E061014008B165C /* FaceDetector.h */,
@@ -109,6 +101,9 @@
 				FBFD775E1E061014008B165C /* ClarifaiClient.m */,
 				FBFD77611E061014008B165C /* AppDelegate.h */,
 				FBFD77621E061014008B165C /* AppDelegate.m */,
+				68B400C11E7F12970023B7A6 /* MainViewController.swift */,
+				68B400C61E7F62F50023B7A6 /* FaceIterator.swift */,
+				68B400C41E7F51180023B7A6 /* Extensions.swift */,
 			);
 			name = FaceStarter;
 			path = ME;
@@ -176,7 +171,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBFD77731E0611AA008B165C /* geth.jpg in Resources */,
 				FBFF4DA71E0618E300890A3A /* LaunchScreen.storyboard in Resources */,
 				FBFD776A1E061020008B165C /* Assets.xcassets in Resources */,
 			);
@@ -238,10 +232,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBFF4DAA1E0618FD00890A3A /* main.m in Sources */,
+				68B400C71E7F62F50023B7A6 /* FaceIterator.swift in Sources */,
+				68B400C51E7F51180023B7A6 /* Extensions.swift in Sources */,
 				FBFD77651E061014008B165C /* FaceDetector.m in Sources */,
 				FBFD77671E061014008B165C /* AppDelegate.m in Sources */,
 				FBFD77661E061014008B165C /* ClarifaiClient.m in Sources */,
-				68B400C21E7F12970023B7A6 /* PermissionsViewController.swift in Sources */,
+				68B400C21E7F12970023B7A6 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
