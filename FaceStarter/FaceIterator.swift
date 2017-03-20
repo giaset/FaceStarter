@@ -11,22 +11,24 @@ import Photos
 
 class FaceIterator {
     
-    // TODO: make sure it's an asset.localIdentifier
-    // we've never seen before
-    
     var assets: PHFetchResult<PHAsset>?
     private var currentIndex = 0
     
     private let faceDetector = FaceDetector()
     
-    func nextFaces(_ completion: @escaping (([UIImage]?) -> Void)) {
+    func nextFaces(_ completion: @escaping (([UIImage]?, String?) -> Void)) {
         guard let assets = assets, currentIndex < assets.count else {
-            completion(nil)
+            completion(nil, nil)
             return
         }
         
         let asset = assets[currentIndex]
         currentIndex += 1
+        
+        if LocalStorage.taggedIdentifiers()[asset.localIdentifier] == true {
+            nextFaces(completion)
+            return
+        }
         
         let options = PHImageRequestOptions()
         options.deliveryMode = .highQualityFormat
@@ -41,7 +43,7 @@ class FaceIterator {
                 let faceImages = faceBounds.flatMap{
                     self.faceDetector.faceImage(from: image, faceBounds: $0)
                 }
-                completion(faceImages)
+                completion(faceImages, asset.localIdentifier)
             } else {
                 self.nextFaces(completion)
             }
